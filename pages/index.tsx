@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import Image from "next/image";
 
 const Home: NextPage = () => {
   return (
@@ -13,6 +14,12 @@ const Home: NextPage = () => {
       <section className="text-gray-600">
         <div className="container flex flex-col justify-center items-center py-24 px-5 mx-auto">
           <div className="flex flex-col items-center mb-16 w-full text-center md:w-2/3">
+            <Image
+              src="/yukidaruma.png"
+              alt="Picture of the author"
+              width={350}
+              height={350}
+            />
             <h1 className="mb-4 text-5xl font-medium text-purple-600 sm:text-4xl">
               Supabase-tailwind
             </h1>

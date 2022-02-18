@@ -5,17 +5,31 @@ import logo from "../public/logo.png";
 
 export const Header = () => {
   return (
-    <header className="flex gap-4 justify-center py-6 text-gray-600 bg-gray-200">
-      <Link href="/">
-        <a>
-          <Image src={logo} alt="logo" width={75} height={75} />
-        </a>
-      </Link>
-      <Link href="/">
-        <a className="text-3xl text-center">
-          <h1 className="pt-2 m-2">Supabase-tailwind</h1>
-        </a>
-      </Link>
+    <header className="flex gap-4 justify-center py-6 text-gray-600">
+   <section className="text-gray-600">
+            <div className="container flex flex-col justify-center items-center py-8 px-5 mx-auto">
+              <div className="flex flex-col items-center w-full text-center md:w-2/3">
+                <Image
+                  src={logo}
+                  alt="Yukidaruma logo"
+                  width={350}
+                  height={350}
+                />
+                <h1 className="mb-4 text-5xl font-medium text-purple-600 sm:text-4xl">
+                  Supabase-tailwind
+                </h1>
+                <p className="mb-8 leading-relaxed">
+                  Book kanri app Kickstarter biodiesel roof party wayfarers cold-pressed. Palo
+                  santo live-edge tumeric scenester copper mug flexitarian.
+                  Prism vice offal plaid everyday carry. Gluten-free chia VHS
+                  squid listicle artisan.
+                </p>
+                <p className="mt-2 mb-8 w-full text-sm text-gray-500">
+                Welcome to my app.
+                </p>   
+              </div>
+            </div>
+          </section>
     </header>
   );
 };

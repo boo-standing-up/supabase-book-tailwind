@@ -6,6 +6,7 @@ import React from "react";
 import { LayoutWrapper } from "../components/layoutWrapper";
 import { client } from "../libs/supabaseClient";
 import { Header } from "../components/header";
+import { TopImage } from "../components/topImage";
 
 type Props = {
   children: ReactNode;
@@ -31,16 +32,17 @@ const Container = (props: Props) => {
     );
   }
   // ログインしていない場合
-  return <>{props.children}</>;
+  return <><TopImage />
+  {props.children}</>;
 };
 
 const Home: NextPage = () => {
   return (
     <LayoutWrapper>
-      <Header />
+   
       <Auth.UserContextProvider supabaseClient={client}>
         <Container>
-          <div className="flex justify-center pt-8 ">
+          <div className="flex justify-center py-8 ">
             <div className="w-full sm:w-96">
               <Auth
                 supabaseClient={client}

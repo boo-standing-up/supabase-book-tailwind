@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 import { Footer } from "./footer";
-// import { Header } from "./header";
+import { Header } from "./header";
 import Head from "next/head";
 
 
@@ -18,7 +18,7 @@ export const LayoutWrapper = (props: Props) => {
       </Head>
       <div className="bg-gray-300">
         <div className="container grid grid-rows-[auto,1fr,auto] mx-auto min-h-screen">
-          {/* <Header /> */}
+          <Header />
           {/* 
                
                 <div className="flex justify-center items-end w-full">

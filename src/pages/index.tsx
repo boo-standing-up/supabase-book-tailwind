@@ -5,6 +5,7 @@ import type { ReactNode } from "react";
 import React from "react";
 import { LayoutWrapper } from "../components/layoutWrapper";
 import { client } from "../libs/supabaseClient";
+import { Header } from "../components/header";
 
 type Props = {
   children: ReactNode;
@@ -16,9 +17,10 @@ const Container = (props: Props) => {
   if (user) {
     return (
       <div>
-        <div className="flex justify-end my-4 mx-2">
+
+        <div className="flex justify-center my-4 mx-2">
           <Button
-            size="medium"
+          size="large"
             icon={<IconLogOut />}
             onClick={() => client.auth.signOut()}
           >
@@ -35,6 +37,7 @@ const Container = (props: Props) => {
 const Home: NextPage = () => {
   return (
     <LayoutWrapper>
+      <Header />
       <Auth.UserContextProvider supabaseClient={client}>
         <Container>
           <div className="flex justify-center pt-8 ">

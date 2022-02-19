@@ -6,6 +6,7 @@ import { LayoutWrapper } from "src/components/layoutWrapper";
 import { client } from "src/libs/supabaseClient";
 import { TopImage } from "src/components/topImage";
 import React, { ReactNode, useCallback, useEffect, useState } from "react";
+import { TopFooter } from "src/components/topfooter";
 
 type Props = {
   children: ReactNode;
@@ -73,6 +74,7 @@ const Container = (props: Props) => {
     <>
       <TopImage />
       {props.children}
+      <TopFooter />
     </>
   );
 };

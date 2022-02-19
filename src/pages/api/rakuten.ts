@@ -17,7 +17,6 @@ type rakutenItem = {
 type bookItem = {
   title: string;
   author: string;
-  price: string;
   publisherName: string;
   largeImageUrl: string;
   isbn: string;
@@ -26,7 +25,6 @@ type bookItem = {
 export type bookData = {
   title: string;
   author: string;
-  price: string;
   publisherName: string;
   imageUrl: string;
   isbn: string;
@@ -34,7 +32,7 @@ export type bookData = {
 
 // UTF-8にエンコードする関数
 const convertToUtf8 = (text: string) => {
-  return unescape(encodeURIComponent(text));
+  return encodeURIComponent(text);
 };
 
 // 必要なデータを抽出する関数
@@ -45,13 +43,9 @@ const extractData = (item: rakutenItem) => {
   let authorString = item.Item.author;
   authorString = moji(authorString).convert("ZE", "HE").toString();
   authorString = moji(authorString).convert("ZS", "HS").reject("HS").toString();
-  let pricestring = item.Item.author;
-  pricestring = moji(pricestring).convert("ZE", "HE").toString();
-  pricestring = moji(pricestring).convert("ZS", "HS").reject("HS").toString();
   const data: bookData = {
     title: titleString,
     author: authorString,
-    price: pricestring,
     publisherName: item.Item.publisherName,
     imageUrl: item.Item.largeImageUrl,
     isbn: item.Item.isbn,

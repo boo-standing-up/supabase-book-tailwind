@@ -3,10 +3,9 @@ import type { NextPage } from "next";
 import { Auth, Button, IconLogOut } from "@supabase/ui";
 import type { ReactNode } from "react";
 import React from "react";
-import { LayoutWrapper } from "../components/layoutWrapper";
-import { client } from "../libs/supabaseClient";
-import { Header } from "../components/header";
-import { TopImage } from "../components/topImage";
+import { LayoutWrapper } from "src/components/layoutWrapper";
+import { client } from "src/libs/supabaseClient";
+import { TopImage } from "src/components/topImage";
 
 type Props = {
   children: ReactNode;

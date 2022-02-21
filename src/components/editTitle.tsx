@@ -173,7 +173,7 @@ export const EditTitle = (props: Props) => {
               </div>
             </Transition.Child>
           </div>
-        </Dialog>{" "}
+        </Dialog>
       </Transition>
     </>
   );

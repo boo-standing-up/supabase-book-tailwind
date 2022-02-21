@@ -18,7 +18,7 @@ export const AddSubtitle = (props: Props) => {
   const [volume, setVolume] = useState<string>("");
   const [isbn, setIsbn] = useState<string>("");
   const [possession, setPossession] = useState<boolean>(false);
-  21;
+
   // ダイアログを開く
   const openModal = useCallback(() => {
     setIsOpen(true);

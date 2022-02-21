@@ -31,7 +31,7 @@ export const TitleList = (props: TitlesProps) => {
       <AddTitle uuid={props.uuid} getTitleList={props.getTitleList} />
       {filteredTitle.map((title) => {
         return (
-          <Link key={title.id} href={"/title?id=${title.id}"} passHref>
+          <Link key={title.id} href={`/title?id=${title.id}`} passHref>
             <div className="p-2 border cursor-pointer">
               <div className="flex justify-center">
                 {title.image_url ? (

@@ -21,13 +21,13 @@ export type subtitle = {
 // 登録済みの書籍情報の取得
 const getSubtitles = async (id: string) => {
   let { data, error } = await client
-    .from("manga_title")
+    .from("book_title")
     .select("*")
     .eq("id", id);
   if (!error && data) {
     const title = data[0];
     ({ data, error } = await client
-      .from("manga_subtitle")
+      .from("book_subtitle")
       .select("*")
       .order("volume", { ascending: true })
       .eq("title_id", id));

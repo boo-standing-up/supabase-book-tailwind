@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ["thumbnail.image.takuten.co.jp", "cover.openbd.jp"],
+    domains: ["thumbnail.image.rakuten.co.jp", "cover.openbd.jp"],
   },
 };
 

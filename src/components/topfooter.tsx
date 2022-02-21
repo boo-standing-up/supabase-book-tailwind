@@ -6,7 +6,7 @@ export const TopFooter = () => {
           I can not download.Now.
         </p>
         <div className="flex">
-          <button className="inline-flex items-center py-3 px-5 bg-gray-100 hover:bg-gray-200 rounded-lg focus:outline-none">
+          <button className="inline-flex items-center py-3 px-5 bg-gray-200 rounded-lg focus:outline-none">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
@@ -20,7 +20,7 @@ export const TopFooter = () => {
               <span className="font-medium">Google Play</span>
             </span>
           </button>
-          <button className="inline-flex items-center py-3 px-5 ml-4 bg-gray-100 hover:bg-gray-200 rounded-lg focus:outline-none">
+          <button className="inline-flex items-center py-3 px-5 ml-4 bg-gray-200 rounded-lg focus:outline-none">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
